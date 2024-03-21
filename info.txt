@@ -1,0 +1,78 @@
+## Inventaris ##
+
+	Cisco:
+
+	   Cisco Router 1941 (2x)
+		
+	   Cisco Layer 3 Switch 9200L (2x)
+
+	   Cisco Switch 2960 (4x)
+
+	PC's:
+
+	   Fujitsu Esprimo E920
+
+		Hardware:
+
+		   CPU: Intel Core i7-4790 @ 3.60 GHz
+		   RAM: 32 GiB (4x 8 GiB Samsung DDR3 12800U - 11-13-B1)
+		   Mobo: Fujitsu D3222-A12 GS2
+		   SSD: Samsung 860 Pro 256 GiB
+		   HDD: WD Blue 500 GiB
+		   ODD: Sony DVDRW
+		   Network 1: Onboard
+		   Network 2: Fujitsu D2907-A11 GS1 
+
+		Software:
+
+		   Proxmox ve 8.1-2
+
+## Addressen ##
+
+	Proxmox server: 172.16.0.2
+	FQDN: pve.soulwave.boo
+	DG: 172.16.0.1
+	DNS: 172.16.0.3
+
+
+SoulWave Research Lab
+
+   Personeel & devices:
+
+	IT admins
+		PC & Tablet
+	Researchers
+		PC & Tablet
+		Research machines
+	Communicatie
+		Mac & Tablet
+		Videoplayers
+	Techniekers showroom
+		PC
+		Beamers, Amps, ...
+	Management
+		PC & Tablet
+	Guest
+		PC & Tablet
+	
+   Devices:
+
+
+ ### To implement ###
+
+Routing
+IPv6
+SSH
+VLANs
+OSPF
+Etherchannel
+STP
+DNS
+DHCP
+dot1x
+WLAN
+Security
+  PortSecurity
+  DHCP snooping
+  Portfast
+  BPDU guard
