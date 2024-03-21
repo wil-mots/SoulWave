@@ -40,17 +40,17 @@ enable
       exit
 
     interface fa 0/1/0
-      description Backup To SoWa_L3-Switch-2
-      ip address 172.16.4.1 255.255.255.0
-      ipv6 address fc00:0:0:4::1/64
-      # ip nat inside
+      description To SoWa_Router-2
+      ip address 172.16.1.1 255.255.255.0
+      ipv6 address fc00:0:0:1::1/64
       no shutdown
       exit
 
     interface fa 0/1/1
-      description To SoWa_Router-2
-      ip address 172.16.1.1 255.255.255.0
-      ipv6 address fc00:0:0:1::1/64
+      description Backup To SoWa_L3-Switch-2
+      ip address 172.16.4.1 255.255.255.0
+      ipv6 address fc00:0:0:4::1/64
+      # ip nat inside
       no shutdown
       exit
 
