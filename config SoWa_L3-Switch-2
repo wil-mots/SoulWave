@@ -86,7 +86,7 @@ enable
       no shutdown
       exit
 
-    interface range g1/0/9 - 24, g1/1/1 - 4
+    interface range g1/0/9 - 21, g1/1/1 - 4
       switchport mode access
       switchport acces vlan 99
       shutdown
