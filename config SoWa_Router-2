@@ -26,31 +26,31 @@ enable
 
     interface gi 0/0
       description To SoWa_L3-Switch-2
-      ip address 172.16.3.1 255.255.255.0
-      ipv6 address fc00:0:0:3::1/64
-      # ip nat inside
+      ip address 172.16.255.49 255.255.255.240
+      ipv6 address fc00:0:0:ffad::1/64
+      ! ip nat inside
       no shutdown
       exit
 
     interface gi 0/1
       description To Internet
       ip address dhcp
-      # ip nat outside
+      ! ip nat outside
       no shutdown
       exit
 
     interface fa 0/1/0
       description To SoWa_Router-1
-      ip address 172.16.1.2 255.255.255.0
-      ipv6 address fc00:0:0:1::2/64
+      ip address 172.16.255.18 255.255.255.240
+      ipv6 address fc00:0:0:ffab::2/64
       no shutdown
       exit
 
     interface fa 0/1/1
       description Backup To SoWa_L3-Switch-1
-      ip address 172.16.5.1 255.255.255.0
-      ipv6 address fc00:0:0:5::1/64
-      # ip nat inside
+      ip address 172.16.255.81 255.255.255.240
+      ipv6 address fc00:0:0:ffaf::1/64
+      ! ip nat inside
       no shutdown
       exit
 
