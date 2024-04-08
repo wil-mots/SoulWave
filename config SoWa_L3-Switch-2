@@ -1,11 +1,11 @@
 enable
   configure terminal
     hostname SoWa_L3-Switch-2
-    no ip domain-name lookup
-    username klaas secret 5 uioppoiu
+    no ip domain lookup
+    username klaas secret uioppoiu
     enable secret uiop
     ipv6 unicast-routing
-    ip domain-name soulwave.boo
+    ip domain name soulwave.boo
     crypto key generate rsa modulus 1024
     service password-encryption
     banner motd #
