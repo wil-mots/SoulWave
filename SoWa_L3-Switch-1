@@ -1,0 +1,114 @@
+enable
+  configure terminal
+    hostname SoWa_L3-Switch-1
+    no ip domain-name lookup
+    username klaas secret 5 uioppoiu
+    enable secret uiop
+    ipv6 unicast-routing
+    ip domain-name soulwave.boo
+    crypto key generate rsa modulus 1024
+    service password-encryption
+    banner motd #
+ __   __                            ___ 
+/__` /  \ |  | |    |  |  /\  \  / |__  
+.__/ \__/ \__/ |___ |/\| /~~\  \/  |___ 
+                                        #
+    
+    line con 0
+      password uiop
+      login
+      exit
+
+    line vty 0 4
+      login local
+      transport input ssh
+      exit
+
+    vlan 11
+      name Researchers
+    vlan 12
+      name Communicatie
+    vlan 13
+      name Staff
+    vlan 14
+      name IT_Personeel
+    vlan 15
+      name Techniekers
+    vlan 16
+      name Guests
+    vlan 99
+      name Unused
+    vlan 100
+      name Management
+    vlan 500
+      name Native
+      exit
+
+    interface vlan 11
+      ip address 172.16.1.1 255.255.255.0
+      ipv6 address fc00:0:0:1::1/64
+      exit
+
+    interface vlan 12
+      ip address 172.16.2.1 255.255.255.0
+      ipv6 address fc00:0:0:2::1/64
+      exit
+
+    interface vlan 13
+      ip address 172.16.3.1 255.255.255.0
+      ipv6 address fc00:0:0:3::1/64
+      exit
+
+    interface vlan 14
+      ip address 172.16.4.1 255.255.255.0
+      ipv6 address fc00:0:0:4::1/64
+      exit
+
+    interface vlan 15
+      ip address 172.16.5.1 255.255.255.0
+      ipv6 address fc00:0:0:5::1/64
+      exit
+
+    interface vlan 16
+      ip address 172.16.6.1 255.255.255.0
+      ipv6 address fc00:0:0:6::1/64
+      exit
+
+    interface vlan 100
+      ip address 172.16.100.1 255.255.255.0
+      ipv6 address fc00:0:0:ff::1/64
+      exit
+
+    interface range g1/0/1 - 8
+      switchport mode trunk
+      switchport trunk native vlan 500
+      switchport trunk allowed vlan 11,12,13,14,15,16,100,500
+      no shutdown
+      exit
+
+    interface range g1/0/9 - 24, g1/1/1 - 4
+      switchport mode access
+      switchport acces vlan 99
+      shutdown
+      exit
+
+    interface g1/0/22
+      no switchport
+      ip address 172.16.255.1 255.255.255.240
+      ipv6 address fc00:0:0:ffaa::1/64
+      no shutdown
+      exit
+
+    interface g1/0/23
+      no switchport
+      ip address 172.16.255.82 255.255.255.240
+      ipv6 address fc00:0:0:ffaf::2/64
+      no shutdown
+      exit
+
+    interface g1/0/24
+      no switchport
+      ip address 172.16.255.34 255.255.255.240
+      ipv6 address fc00:0:0:ffac::2/64
+      no shutdown
+      exit
