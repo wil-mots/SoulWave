@@ -42,13 +42,6 @@ enable
 !!!! TO FIX: Following interfaces cannot be given ip address. Find a solution
 !!!! Vlan's maybe
 
-!    interface fa 0/1/0
-!      description To SoWa_Router-2
-!      ip address 172.16.255.17 255.255.255.240
-!      ipv6 address fc00:0:0:ffab::1/64
-!      no shutdown
-!      exit
-
 !    interface fa 0/1/1
 !      description Backup To SoWa_L3-Switch-2
 !      ip address 172.16.255.65 255.255.255.240
@@ -69,3 +62,18 @@ enable
 
     ip route 0.0.0.0 0.0.0.0 gi0/1
     ip route 172.16.255.48 255.255.255.240 172.16.255.18
+
+    vlan 101
+      name Tussen_Routers
+      exit
+
+    interface vlan 101
+      ip address 172.16.255.17 255.255.255.240
+      ipv6 address fc00:0:0:ffab::1/64
+      exit
+
+    interface fa 0/1/0
+      description To SoWa_Router-1
+      switchport mode access
+      switchport access vlan 101
+
