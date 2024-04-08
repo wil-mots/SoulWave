@@ -2,7 +2,7 @@ enable
   configure terminal
     hostname SoWa_Router-1
     no ip domain-name lookup
-    username klaas secret 5 uioppoiu
+    username klaas secret uioppoiu
     enable secret uiop
     ipv6 unicast-routing
     ip domain-name soulwave.boo
@@ -28,7 +28,7 @@ enable
       description To SoWa_L3-Switch-1
       ip address 172.16.255.33 255.255.255.240
       ipv6 address fc00:0:0:ffac::1/64
-      # ip nat inside
+      ! ip nat inside
       no shutdown
       exit
 
@@ -39,20 +39,23 @@ enable
       no shutdown
       exit
 
-    interface fa 0/1/0
-      description To SoWa_Router-2
-      ip address 172.16.255.17 255.255.255.240
-      ipv6 address fc00:0:0:ffab::1/64
-      no shutdown
-      exit
+!!!! TO FIX: Following interfaces cannot be given ip address. Find a solution
+!!!! Vlan's maybe
 
-    interface fa 0/1/1
-      description Backup To SoWa_L3-Switch-2
-      ip address 172.16.255.65 255.255.255.240
-      ipv6 address fc00:0:0:ffae::1/64
-      ! ip nat inside
-      no shutdown
-      exit
+!    interface fa 0/1/0
+!      description To SoWa_Router-2
+!      ip address 172.16.255.17 255.255.255.240
+!      ipv6 address fc00:0:0:ffab::1/64
+!      no shutdown
+!      exit
+
+!    interface fa 0/1/1
+!      description Backup To SoWa_L3-Switch-2
+!      ip address 172.16.255.65 255.255.255.240
+!      ipv6 address fc00:0:0:ffae::1/64
+!      ! ip nat inside
+!      no shutdown
+!      exit
 
     interface fa 0/1/2
       description --unused--
