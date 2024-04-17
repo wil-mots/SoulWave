@@ -57,13 +57,16 @@ SoulWave Research Lab
 	
    Devices:
 
+ ### Implemented ###
+
+- Static Routing
+- IPv4 & IPv6
+- SSH
+- Vlans
 
  ### To implement ###
 
-Routing
-IPv6
-SSH
-VLANs
+NAT
 OSPF
 Etherchannel
 STP
