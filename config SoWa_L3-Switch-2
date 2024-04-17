@@ -114,4 +114,6 @@ enable
       exit
 
     ip default-gateway 172.16.255.49
+    ipv6 route ::/0 fc00:0:0:ffad::1
     ip route 172.16.255.32 255.255.255.240 172.16.255.65
+    ipv6 route fc00:0:0:ffac::/64 fc00:0:0:ffae::1
