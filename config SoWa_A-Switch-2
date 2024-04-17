@@ -50,6 +50,7 @@ enable
       no shutdown
 
     ip default-gateway 172.16.100.1
+    ipv6 route ::/0 fc00:0:0:ff::1
 
     interface range f0/1 - 4
       switchport mode trunk
