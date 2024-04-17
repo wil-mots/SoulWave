@@ -49,9 +49,6 @@ enable
       shutdown
       exit
 
-    ip route 0.0.0.0 0.0.0.0 gi0/1
-    ip route 172.16.255.32 255.255.255.240 172.16.255.17
-
     vlan 101
       name Tussen_Routers
       exit
@@ -79,3 +76,8 @@ enable
       description To SoWa_L3-Switch-1
       switchport mode access
       switchport access vlan 103
+
+    ip route 0.0.0.0 0.0.0.0 dhcp
+    ip route 172.16.255.32 255.255.255.240 172.16.255.17
+    ipv6 route fc00:0:0:ffac::/64 fc00:0:0:ffab::1
+    
