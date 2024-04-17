@@ -39,18 +39,6 @@ enable
       no shutdown
       exit
 
-!!!! TO FIX: Following interfaces cannot be given ip address. Find a solution
-!!!! Vlan's maybe
-
-
-!    interface fa 0/1/1
-!      description Backup To SoWa_L3-Switch-1
-!      ip address 172.16.255.81 255.255.255.240
-!      ipv6 address fc00:0:0:ffaf::1/64
-!      ! ip nat inside
-!      no shutdown
-!      exit
-
     interface fa 0/1/2
       description --unused--
       shutdown
@@ -77,3 +65,17 @@ enable
       description To SoWa_Router-1
       switchport mode access
       switchport access 101
+
+    vlan 103
+      name Tussen_R2_S1
+      exit
+
+    interface vlan 103
+      ip address 172.16.255.81 255.255.255.240
+      ipv6 address fc00:0:0:ffaf::1/64
+      exit
+
+    interface fa 0/1/1
+      description To SoWa_L3-Switch-1
+      switchport mode access
+      switchport access vlan 103
