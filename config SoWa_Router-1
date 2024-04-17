@@ -49,9 +49,6 @@ enable
       shutdown
       exit
 
-    ip route 0.0.0.0 0.0.0.0 gi0/1
-    ip route 172.16.255.48 255.255.255.240 172.16.255.18
-
     vlan 101
       name Tussen_Routers
       exit
@@ -80,4 +77,7 @@ enable
       switchport mode access
       switchport access vlan 102
 
+    ip route 0.0.0.0 0.0.0.0 dhcp
+    ip route 172.16.255.48 255.255.255.240 172.16.255.18
+    ipv6 route fc00:0:0:ffad::/64 fc00:0:0:ffab::2
 
