@@ -58,3 +58,13 @@ enable
       switchport trunk allowed vlan 11,12,13,14,15,16,100,500
       no shutdown
       exit
+
+!!! Etherchannel config here !!!
+
+    interface range f0/1-2
+      channel-group 1 mode active
+      exit
+
+    interface range f0/3-4
+      channel-group 2 mode active
+      exit
