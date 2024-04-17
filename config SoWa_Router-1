@@ -62,7 +62,7 @@ enable
       exit
 
     interface fa 0/1/0
-      description To SoWa_Router-1
+      description To SoWa_Router-2
       switchport mode access
       switchport access vlan 101
 
