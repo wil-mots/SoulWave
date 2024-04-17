@@ -112,3 +112,6 @@ enable
       ipv6 address fc00:0:0:ffac::2/64
       no shutdown
       exit
+
+    ip default-gateway 172.16.255.33
+    ip route 172.16.255.48 255.255.255.240 172.16.255.81
