@@ -14,6 +14,7 @@ enable
 .__/ \__/ \__/ |___ |/\| /~~\  \/  |___ 
                                         #
     
+    ip ssh client algorithm encryption aes128-cbc aes128-ctr aes128-gcm aes192-cbc aes192-ctr aes256-cbc aes256-ctr aes 256-gcm
     line con 0
       password uiop
       login
