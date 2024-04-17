@@ -63,12 +63,12 @@ SoulWave Research Lab
 - IPv4 & IPv6
 - SSH
 - Vlans
+- Etherchannel (To test)
 
  ### To implement ###
 
 NAT
 OSPF
-Etherchannel
 STP
 DNS
 DHCP
