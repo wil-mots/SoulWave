@@ -116,8 +116,12 @@ enable
 
     ip default-gateway 172.16.255.33
     ipv6 route ::/0 fc00:0:0:ffac::1
+
     ip route 172.16.255.48 255.255.255.240 172.16.255.81
     ipv6 route fc00:0:0:ffad::/64 fc00:0:0:ffaf::1
+
+    ip route 172.16.255.16 255.255.255.240 172.16.255.33
+    ip route 172.16.255.64 255.255.255.240 172.16.255.33
 
     !!! Etherchannel config here !!!
 
