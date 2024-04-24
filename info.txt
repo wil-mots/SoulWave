@@ -29,10 +29,10 @@
 
 ## Addressen ##
 
-	Proxmox server: 172.16.0.2
+	Proxmox server: 172.16.255.11
 	FQDN: pve.soulwave.boo
-	DG: 172.16.0.1
-	DNS: 172.16.0.3
+	DG: 172.16.255.1
+	DNS: 172.16.255.12
 
 
 SoulWave Research Lab
@@ -64,10 +64,10 @@ SoulWave Research Lab
 - SSH
 - Vlans
 - Etherchannel (To test)
+- NAT
 
  ### To implement ###
 
-NAT
 OSPF
 STP
 DNS
