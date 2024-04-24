@@ -28,14 +28,14 @@ enable
       description To SoWa_L3-Switch-1
       ip address 172.16.255.33 255.255.255.240
       ipv6 address fc00:0:0:ffac::1/64
-      ! ip nat inside
+      ip nat inside
       no shutdown
       exit
 
     interface gi 0/1
       description To Internet
       ip address dhcp
-      ! ip nat outside
+      ip nat outside
       no shutdown
       exit
 
@@ -56,6 +56,7 @@ enable
     interface vlan 101
       ip address 172.16.255.17 255.255.255.240
       ipv6 address fc00:0:0:ffab::1/64
+      ip nat inside
       exit
 
     interface fa 0/1/0
@@ -70,6 +71,7 @@ enable
     interface vlan 102
       ip address 172.16.255.65 255.255.255.240
       ipv6 address fc00:0:0:ffae::1/64
+      ip nat inside
       exit
 
     interface fa 0/1/1
@@ -81,3 +83,7 @@ enable
     ip route 172.16.255.48 255.255.255.240 172.16.255.18
     ipv6 route fc00:0:0:ffad::/64 fc00:0:0:ffab::2
 
+    !!! NAT Configuration here !!!
+
+    access-list 1 permit 172.16.1.0 0.0.7.255
+    ip nat inside source list 1 interface gi 0/1 overload
