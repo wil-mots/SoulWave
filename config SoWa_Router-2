@@ -28,7 +28,7 @@ enable
       description To SoWa_L3-Switch-2
       ip address 172.16.255.49 255.255.255.240
       ipv6 address fc00:0:0:ffad::1/64
-      ! ip nat inside
+      ip nat inside
       no shutdown
       exit
 
