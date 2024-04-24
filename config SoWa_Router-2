@@ -79,11 +79,29 @@ enable
       switchport mode access
       switchport access vlan 103
 
+!!! Default routes for internet access !!!
+
     ip route 0.0.0.0 0.0.0.0 dhcp
+
+!!! Routes for internal networks !!!
+
     ip route 172.16.255.32 255.255.255.240 172.16.255.17
     ipv6 route fc00:0:0:ffac::/64 fc00:0:0:ffab::1
 
-    !!! NAT Configuration here !!!
+    ip route 172.16.255.0 255.255.255.240 172.16.255.50
+    ip route 172.16.255.64 255.255.255.240 172.16.255.50
+
+!!! VLAN Routes !!!
+
+    ip route 172.16.1.0 255.255.255.0 172.16.255.50
+    ip route 172.16.2.0 255.255.255.0 172.16.255.50
+    ip route 172.16.3.0 255.255.255.0 172.16.255.50
+    ip route 172.16.4.0 255.255.255.0 172.16.255.50
+    ip route 172.16.5.0 255.255.255.0 172.16.255.50
+    ip route 172.16.6.0 255.255.255.0 172.16.255.50
+    ip route 172.16.100.0 255.255.255.0 172.16.255.50
+
+!!! NAT Configuration !!!
 
     access-list 1 permit 172.16.1.0 0.0.7.255
     ip nat inside source list 1 interface gi 0/1 overload
