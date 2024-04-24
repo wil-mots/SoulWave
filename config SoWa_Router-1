@@ -89,7 +89,10 @@ enable
     ipv6 route fc00:0:0:ffad::/64 fc00:0:0:ffab::2
 
     ip route 172.16.255.0 255.255.255.240 172.16.255.34
+    ipv6 route fc00:0:0:ffaa::/64 fc00:0:0:ffac::2
+
     ip route 172.16.255.80 255.255.255.240 172.16.255.34
+    ipv6 route fc00:0:0:ffaf::/64 fc00:0:0:ffac::2    
 
 !!! VLAN Routes !!!
 
