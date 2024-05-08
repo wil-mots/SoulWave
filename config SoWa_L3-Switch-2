@@ -51,36 +51,43 @@ enable
     interface vlan 11
       ip address 172.16.1.2 255.255.255.0
       ipv6 address fc00:0:0:1::2/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 12
       ip address 172.16.2.2 255.255.255.0
       ipv6 address fc00:0:0:2::2/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 13
       ip address 172.16.3.2 255.255.255.0
       ipv6 address fc00:0:0:3::2/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 14
       ip address 172.16.4.2 255.255.255.0
       ipv6 address fc00:0:0:4::2/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 15
       ip address 172.16.5.2 255.255.255.0
       ipv6 address fc00:0:0:5::2/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 16
       ip address 172.16.6.2 255.255.255.0
       ipv6 address fc00:0:0:6::2/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 21
       ip address 172.16.11.22 255.255.255.0
       ipv6 address fc00:0:0:11::22/64
+      ip helper-address 172.16.11.1
       exit
 
     interface vlan 100
