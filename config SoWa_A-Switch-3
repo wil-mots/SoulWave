@@ -36,6 +36,8 @@ enable
       name Techniekers
     vlan 16
       name Guests
+    vlan 21
+      name Services
     vlan 99
       name Unused
     vlan 100
@@ -55,7 +57,7 @@ enable
     interface range f0/1 - 4
       switchport mode trunk
       switchport trunk native vlan 500
-      switchport trunk allowed vlan 11,12,13,14,15,16,100,500
+      switchport trunk allowed vlan 11,12,13,14,15,16,21,100,500
       no shutdown
       exit
 
