@@ -108,4 +108,5 @@ enable
 !!! NAT Configuration !!!
 
     access-list 1 permit 172.16.1.0 0.0.7.255
+    access-list 1 permit 172.16.11.0 0.0.0.255
     ip nat inside source list 1 interface gi 0/1 overload
