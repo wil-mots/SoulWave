@@ -29,10 +29,10 @@
 
 ## Addressen ##
 
-	Proxmox server: 172.16.255.11
+	Proxmox server: 	172.16.11.11
+	Windows Server 22: 	172.16.11.1
+	Ubuntu Server: 		172.16.11.2
 	FQDN: pve.soulwave.boo
-	DG: 172.16.255.1
-	DNS: 172.16.255.12
 
 
 SoulWave Research Lab
@@ -65,13 +65,20 @@ SoulWave Research Lab
 - Vlans
 - Etherchannel (To test)
 - NAT
+- GLBP on Vlans
+- Floating static route to Routers
+- Proxmox
+	- Windows Server
+		- DHCP server, scope per VLAN
+		- DNS server
+	- Ubuntu Server
+		- Http webservice
+		- Https service runs but certificate shizzle
 
  ### To implement ###
 
-OSPF
-STP
-DNS
-DHCP
+(OSPF)
+(STP) Not necessary
 dot1x
 WLAN
 Security
