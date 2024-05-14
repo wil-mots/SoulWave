@@ -61,6 +61,36 @@ enable
       no shutdown
       exit
 
+    interface f0/11
+      switchport mode access
+      switchport access vlan 11
+      exit
+
+    interface f0/12
+      switchport mode access
+      switchport access vlan 12
+      exit
+
+    interface f0/13
+      switchport mode access
+      switchport access vlan 13
+      exit
+
+    interface f0/14
+      switchport mode access
+      switchport access vlan 14
+      exit
+
+    interface f0/15
+      switchport mode access
+      switchport access vlan 15
+      exit
+
+    interface f0/16
+      switchport mode access
+      switchport access vlan 16
+      exit
+
 !!! Etherchannel config here !!!
 
     interface range f0/1-2
