@@ -144,6 +144,7 @@ enable
 !!! Default routes for Internet access !!!
 
     ip route 0.0.0.0 0.0.0.0 172.16.255.49
+    ip route 0.0.0.0 0.0.0.0 172.16.255.65 5
     ipv6 route ::/0 fc00:0:0:ffad::1
 
 !!! Routes for internal networks !!!
