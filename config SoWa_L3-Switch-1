@@ -49,39 +49,45 @@ enable
       exit
 
     interface vlan 11
-      ip address 172.16.1.1 255.255.255.0
+      ip address 172.16.1.3 255.255.255.0
       ipv6 address fc00:0:0:1::1/64
       ip helper-address 172.16.11.1
+      glbp 11 ip 172.16.1.1
       exit
 
     interface vlan 12
-      ip address 172.16.2.1 255.255.255.0
+      ip address 172.16.2.3 255.255.255.0
       ipv6 address fc00:0:0:2::1/64
       ip helper-address 172.16.11.1
+      glbp 12 ip 172.16.2.1
       exit
 
     interface vlan 13
-      ip address 172.16.3.1 255.255.255.0
+      ip address 172.16.3.3 255.255.255.0
       ipv6 address fc00:0:0:3::1/64
       ip helper-address 172.16.11.1
+      glbp 13 ip 172.16.3.1
       exit
 
     interface vlan 14
-      ip address 172.16.4.1 255.255.255.0
+      ip address 172.16.4.3 255.255.255.0
       ipv6 address fc00:0:0:4::1/64
       ip helper-address 172.16.11.1
+      glbp 14 ip 172.16.4.1
       exit
 
     interface vlan 15
-      ip address 172.16.5.1 255.255.255.0
+      ip address 172.16.5.3 255.255.255.0
       ipv6 address fc00:0:0:5::1/64
       ip helper-address 172.16.11.1
+      glbp 15 ip 172.16.5.1
       exit
 
     interface vlan 16
-      ip address 172.16.6.1 255.255.255.0
+      ip address 172.16.6.3 255.255.255.0
       ipv6 address fc00:0:0:6::1/64
       ip helper-address 172.16.11.1
+      glbp 16 ip 172.16.6.1
       exit
 
     interface vlan 21
@@ -165,3 +171,4 @@ enable
     interface range g1/0/7-8
       channel-group 4 mode active
       exit
+      
