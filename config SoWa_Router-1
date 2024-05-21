@@ -13,6 +13,8 @@ enable
 /__` /  \ |  | |    |  |  /\  \  / |__  
 .__/ \__/ \__/ |___ |/\| /~~\  \/  |___ 
                                         #
+    ntp server 0.be.pool.ntp.org
+    clock timezone GMT +2
     
     line con 0
       password uiop
