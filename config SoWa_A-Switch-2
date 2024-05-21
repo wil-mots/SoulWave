@@ -13,7 +13,10 @@ enable
 /__` /  \ |  | |    |  |  /\  \  / |__  
 .__/ \__/ \__/ |___ |/\| /~~\  \/  |___ 
                                         #
-    
+
+    ntp server 172.16.255.33
+    clock timezone GMT +2
+
     line con 0
       password uiop
       login
