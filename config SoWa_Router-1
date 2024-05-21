@@ -15,6 +15,7 @@ enable
                                         #
     ntp server 0.be.pool.ntp.org
     clock timezone GMT +2
+    ntp master
     
     line con 0
       password uiop
