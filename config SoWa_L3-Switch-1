@@ -15,7 +15,10 @@ enable
                                         #
     
     ip ssh client algorithm encryption aes128-cbc aes128-ctr aes128-gcm aes192-cbc aes192-ctr aes256-cbc aes256-ctr aes256-gcm
+    ntp server 172.16.255.33
+    clock timezone GMT +2
     ip routing
+
     line con 0
       password uiop
       login
