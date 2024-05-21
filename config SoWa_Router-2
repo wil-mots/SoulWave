@@ -14,6 +14,7 @@ enable
 .__/ \__/ \__/ |___ |/\| /~~\  \/  |___ 
                                         #
     ntp server 0.be.pool.ntp.org
+    ntp master
     clock timezone GMT +2
     
     line con 0
